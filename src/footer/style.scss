@@ -1,0 +1,14 @@
+@import "../custom";
+.footer{
+    background-color:rgba($black,.9) ;
+    .contact-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba($primary, $alpha: 0.6);
+        font-size: rem(30);
+    }
+    .social-media{
+        background-color: rgba($white, $alpha: 0.08);
+    }
+}

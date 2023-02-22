@@ -1,0 +1,62 @@
+@use "../custom" as *;
+@use "../sass/components/color.scss" as *;
+
+.navbar{
+    @include gradient;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    .navbar-nav{
+        li{
+            padding:0 0.5rem;
+            a{
+                color: $white !important;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .button-special{
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+    }
+}
+.button-special{
+    color: $black !important;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(7);
+    padding:rem(7) rem(10) ;
+    text-decoration: none;
+    width: fit-content;
+    border: rem(1) solid $white;
+    &:hover{
+        @include gradient;
+        color: $white !important;
+        .icon{
+            background-color: $primary;
+        }
+    }
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $secondary;
+        color: $white;
+        width: rem(30);
+        height: rem(30);
+    }
+    &.light{
+        border-color: $primary;
+        .icon{
+            background-color: $secondary;
+        }
+        &:hover{
+            color: $white !important;
+        }
+    }
+    
+}

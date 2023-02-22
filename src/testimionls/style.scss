@@ -1,0 +1,82 @@
+@use "../sass/components/color" as *;
+@use "../custom" as *;
+.testimonials {
+    .special-title {
+        &::after {
+            height: rem(0.5);
+            width: rem(30);
+            background-color: $white;
+        }
+        &::before {
+            display: none;
+        }
+    }
+    #testimonialsCarousel{
+        margin-top: rem(0);
+        .carousel-inner{
+            .text-container{
+                background-color: rgba($white, 0.8);
+                color: black;
+                padding: rem(20) rem(30);
+                font-size: .8rem;
+                border-radius: rem(10);
+                position: relative;
+                padding-bottom: rem(45);
+                margin-bottom: rem(45);
+                .stars{
+                    margin-bottom: rem(100);
+                    width: fit-content;
+                    margin: auto;
+                    color: rgba($primary, 0.7);
+                }
+                .img-container{
+                    width: rem(80);
+                    border-radius: 50%;
+                    position: absolute;
+                    left:50%;
+                    bottom: 0;
+                    transform: translateX(-50%) translateY(50%);
+                    img{
+                        width: 100%;
+                        border-radius: 50%;
+                        aspect-ratio: 1 / 1;
+                        border: rem(4) solid $primary;
+                    }
+                }
+                p{
+                    .icon{
+                        font-size: rem(35);
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        .buttons-container{
+            width: fit-content;
+            margin: auto;
+            margin-top: rem(20);
+            display: flex;
+            gap: rem(3);
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                background-color: transparent;
+                color: white;
+                border: rem(0.5) solid $white;
+                padding: rem(5);
+                width: rem(35);
+                height: rem(25);
+                &:hover{
+                    background-color: white;
+                    transition: $trans;
+                    color: black;
+                }
+                &:focus{
+                    outline: rem(1) solid $white;
+                }
+            }   
+        }
+    }
+}

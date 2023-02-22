@@ -1,0 +1,19 @@
+@use "../custom" as *;
+
+.companies{
+    padding-bottom: 100px;
+    .box{
+        padding: rem(2);
+        margin-top: rem(30);
+        text-align: center;
+        height: 3rem;
+        box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
+        .img-comp{
+            height: 100%;
+            max-width: 100%;
+            &:hover{
+                filter: grayscale(120);
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import "../custom";
+.contact {
+    padding-top: rem(40);
+    background-color: rgba($black, 0.1);
+    .boxes-row{
+        >*{
+            padding: 30px 40px;
+            @include media-breakpoint-down(md){
+                padding: 30px 20px; 
+            }
+        }
+    }
+    .correct-list li {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        &::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: bold;
+        }
+    }
+    form {
+        .row {
+            input,
+            textarea {
+                width: 100%;
+                min-height: rem(40);
+                padding: 0 rem(10);
+                border: rem(1) solid $black;
+                border-radius: rem(5);
+                resize: none;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                &:focus {
+                    border-color: $primary;
+                    outline: none;
+                    
+                }
+                &::placeholder{
+                    font-weight: 400;
+                }
+            }
+            textarea {
+                padding-top: rem(10);
+                min-height: rem(160);
+            }
+        }
+    }
+}

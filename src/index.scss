@@ -1,0 +1,56 @@
+@import "./custom";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.border-right {
+    border-right: 0.1rem solid $gray-300;
+}
+.f-poppins {
+    font-family: "Poppins", sans-serif;
+}
+.text-gradient {
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(to right, $primary, $secondary);
+    background-clip: text;
+}
+.bg-gradient {
+    background-image: linear-gradient(
+        to right,
+        $primary,
+        $secondary
+    ) !important;
+}
+.shadow-down {
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+}
+
+.special-title {
+    text-align: center;
+    position: relative;
+    $bottom: 5;
+    &::after {
+        content: "";
+        width: rrem(120);
+        height: rrem(3);
+        position: absolute;
+        top: calc(100% + rrem($bottom));
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $primary;
+    }
+    &::before {
+        content: "";
+        width: rrem(20);
+        height: rrem(8);
+        background-color: "";
+        position: absolute;
+        top: calc(100% + rrem($bottom));
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $primary;
+    }
+    + p {
+        margin-top: rem(30);
+        text-align: center;
+    }
+}

@@ -1,0 +1,4 @@
+@use "../../custom" as *;
+@mixin gradient($feature:background-image){
+    #{$feature}: linear-gradient(to right,$primary,$secondary);
+}
